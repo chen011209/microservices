@@ -8,5 +8,12 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "pattern")
 public class PatternProperties {
+
+    /**
+     * 配置优先级:远程指定环境>远程共享>本地
+     */
+
     private String dateformat;
+    private String envSharedValue;
+    private String name;
 }

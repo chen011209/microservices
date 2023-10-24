@@ -36,6 +36,11 @@ public class UserController {
     @Autowired
     private PatternProperties properties;
 
+    @GetMapping("prop")
+    public PatternProperties properties(){
+        return properties;
+    }
+
 
      @Value("${pattern.dateformat}")
      private String dateformat;
