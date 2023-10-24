@@ -15,6 +15,11 @@ public class OrderApplication {
     }
 
 
+       /* @Bean
+    public IRule randomRule() {
+        return new RandomRule();
+    }*/
+
     @Bean
     @LoadBalanced
     public RestTemplate restTemplate() {
