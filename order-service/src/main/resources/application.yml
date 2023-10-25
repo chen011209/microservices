@@ -45,3 +45,15 @@ ribbon:
     enabled: true # 开启饥饿加载
     clients: # 指定饥饿加载的服务名称
       - userservice
+
+
+#default是默认配置,也可以指定某个服务配置
+feign:
+  client:
+    config:
+      default:
+        logger-level: BASIC
+  httpclient:
+    enabled: true # 支持HttpClient的开关
+    max-connections: 200 # 最大连接数
+    max-connections-per-route: 50 # 单个路径的最大连接数
