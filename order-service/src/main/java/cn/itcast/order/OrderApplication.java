@@ -1,5 +1,7 @@
 package cn.itcast.order;
 
+import cn.itcast.feign.clients.UserClient;
+import cn.itcast.feign.config.DefaultFeignConfiguration;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,7 +11,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 @MapperScan("cn.itcast.order.mapper")
 @SpringBootApplication
-@EnableFeignClients
+//feign的配置被移动到另一个包中,而spring的扫描只在本项目中,项目只知道有userClient类但没有注入容器中,所以需要指定用的class
+@EnableFeignClients(clients = UserClient.class,defaultConfiguration = DefaultFeignConfiguration.class)
 public class OrderApplication {
 
     public static void main(String[] args) {
