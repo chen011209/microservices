@@ -10,3 +10,5 @@ spring:
         file-extension: yaml # 文件后缀名
 
 #        nacos配置名userservice-dev.yaml
+
+#nacos在实际生产可以做集群搭建,目前还没配置:搭建多台nacos服务器后用nginx做负载均衡
