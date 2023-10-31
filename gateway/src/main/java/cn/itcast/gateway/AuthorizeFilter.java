@@ -12,10 +12,17 @@ import reactor.core.publisher.Mono;
 
 
 //order为filter执行顺序的注解 也可以实现ordered的方式实现
-// @Order(-1)
 //测试地址:http://localhost:10010/user/1?authorization=admin
+
+// @Order(-1)
 @Component
 public class AuthorizeFilter implements GlobalFilter, Ordered {
+    /**
+     * 过滤器执行顺序   order值越低越早执行  order值一样时   default-filters 路由 globalFilter
+     * @param exchange
+     * @param chain
+     * @return
+     */
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         // 1.获取请求参数
