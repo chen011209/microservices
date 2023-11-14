@@ -36,20 +36,20 @@ public class UserController {
     }
 
 
-    @Autowired
-    private PatternProperties properties;
+//    @Autowired
+//    private PatternProperties properties;
 
-    @GetMapping("prop")
-    public PatternProperties properties(){
-        return properties;
-    }
-
-
-     @Value("${pattern.dateformat}")
-     private String dateformat;
-    @GetMapping("now")
-    public String now(){
-        return LocalDateTime.now().format(DateTimeFormatter.ofPattern(properties.getDateformat()));
-    }
+//    @GetMapping("prop")
+//    public PatternProperties properties(){
+//        return properties;
+//    }
+//
+//
+//     @Value("${pattern.dateformat}")
+//     private String dateformat;
+//    @GetMapping("now")
+//    public String now(){
+//        return LocalDateTime.now().format(DateTimeFormatter.ofPattern(properties.getDateformat()));
+//    }
 
 }

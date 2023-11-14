@@ -1,1 +1,6 @@
 copy configuration可以新运行一个service
+
+虚拟机是在计算机上模拟出一个操作系统 然后经过中间层调用物理操作系统
+docker是将依赖和系统函数打包，然后应用直接调用内核，不用新的操作系统
+
+nacos单机启动 startup.cmd -m standalone
