@@ -1,0 +1,24 @@
+2023-11-15 09:34:20,178 INFO DEFAULT_GROUP@@userservice {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.81.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2023-11-15 09:34:20,179 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@userservice, ips: 192.168.81.1:8081_true,
+
+2023-11-15 10:05:38,452 INFO DEFAULT_GROUP@@orderservice {SYNC} {IP-NEW} cluster: XM, new ips size: 1, content: [192.168.81.1:8080:unknown:XM_1.0_true_false_XM]
+
+2023-11-15 10:05:38,452 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@orderservice, ips: 192.168.81.1:8080_true,
+
+2023-11-15 10:06:42,352 INFO DEFAULT_GROUP@@orderservice {SYNC} {IP-DEAD} cluster: XM, dead ips size: 1, content: [192.168.81.1:8080:unknown:XM_1.0_true_false_XM]
+
+2023-11-15 10:06:42,352 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@orderservice, ips: 
+
+2023-11-15 10:06:42,581 INFO DEFAULT_GROUP@@userservice {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.81.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2023-11-15 10:06:42,581 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@userservice, ips: 
+
+2023-11-15 15:50:46,324 INFO DEFAULT_GROUP@@userservice {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.81.1:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2023-11-15 15:50:46,328 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@userservice, ips: 192.168.81.1:8081_true,
+
+2023-11-15 15:51:23,757 INFO DEFAULT_GROUP@@orderservice {SYNC} {IP-NEW} cluster: XM, new ips size: 1, content: [192.168.81.1:8080:unknown:XM_1.0_true_false_XM]
+
+2023-11-15 15:51:23,758 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@orderservice, ips: 192.168.81.1:8080_true,
+

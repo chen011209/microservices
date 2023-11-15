@@ -1,0 +1,54 @@
+2023-11-15 09:34:20,143 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@userservice
+
+2023-11-15 10:05:38,420 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@orderservice
+
+2023-11-15 10:08:57,333 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@orderservice
+
+2023-11-15 10:08:57,337 INFO [RAFT-NOTIFIER] datum is deleted, key: com.alibaba.nacos.naming.domains.meta.public##DEFAULT_GROUP@@userservice
+
+2023-11-15 15:50:22,180 INFO raft peers changed: [Member{ip='192.168.81.1', port=8848, state=UP, extendInfo={raftPort=7848}}]
+
+2023-11-15 15:50:22,208 INFO initializing Raft sub-system
+
+2023-11-15 15:50:22,208 INFO finish loading all datums, size: 0 cost 0 ms.
+
+2023-11-15 15:50:22,212 INFO cache loaded, datum count: 0, current term: 0
+
+2023-11-15 15:50:22,212 INFO finish to load data from disk, cost: 4 ms.
+
+2023-11-15 15:50:22,216 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2023-11-15 15:50:23,204 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2023-11-15 15:50:23,229 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2023-11-15 15:50:27,160 WARN start to close old raft protocol!!!
+
+2023-11-15 15:50:27,160 WARN stop old raft protocol task for notifier
+
+2023-11-15 15:50:27,160 WARN stop old raft protocol task for master task
+
+2023-11-15 15:50:27,160 WARN stop old raft protocol task for heartbeat task
+
+2023-11-15 15:50:27,160 WARN clean old cache datum for old raft
+
+2023-11-15 15:50:27,160 WARN start to close old raft protocol!!!
+
+2023-11-15 15:50:27,160 WARN stop old raft protocol task for notifier
+
+2023-11-15 15:50:27,160 WARN stop old raft protocol task for master task
+
+2023-11-15 15:50:27,161 WARN stop old raft protocol task for heartbeat task
+
+2023-11-15 15:50:27,161 WARN clean old cache datum for old raft
+
+2023-11-15 15:50:27,161 WARN start to move old raft protocol metadata
+
+2023-11-15 15:50:27,168 WARN start to move old raft protocol metadata
+
+2023-11-15 15:50:27,168 INFO raft peers changed: [Member{ip='192.168.81.1', port=8848, state=UP, extendInfo={lastRefreshTime=1700034627166, raftPort=7848, version=1.4.1}}]
+
+2023-11-15 15:50:46,108 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@userservice
+
+2023-11-15 15:51:23,756 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@orderservice
+
