@@ -32,7 +32,12 @@
         <mysql.version>5.1.47</mysql.version>
         <mybatis.version>2.1.1</mybatis.version>
     </properties>
-
+    <distributionManagement>
+        <repository>
+            <id>local-repo</id> <!-- 本地仓库ID -->
+            <url>file:///D:/environment/maven/apache-maven-3.6.1/mvn_rep</url> <!-- 本地仓库路径 -->
+        </repository>
+    </distributionManagement>
     <dependencyManagement>
         <dependencies>
             <!-- springCloud -->

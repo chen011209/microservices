@@ -32,7 +32,11 @@ public class UserController {
 
         System.out.println(truth);
 
+
+
         return userService.queryById(id);
+
+
     }
 
 

@@ -1,6 +1,9 @@
 copy configuration可以新运行一个service
 
-虚拟机是在计算机上模拟出一个操作系统 然后经过中间层调用物理操作系统
-docker是将依赖和系统函数打包，然后应用直接调用内核，不用新的操作系统
-
 nacos单机启动 startup.cmd -m standalone
+
+maven使用lifecycle的各种指令
+package打包成jar包
+deploy部署jar包
+可以在pom文件中指定部署位置 注意如果有父工程 直接在父工程pom文件中写后打包父工程
+自己写的jar包需要在仓库中 其他程序引用才能一起打成jar包

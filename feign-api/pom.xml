@@ -9,7 +9,19 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+
+    <!-- 项目信息 -->
     <artifactId>feign-api</artifactId>
+    <version>1.0</version>
+
+
+    <!-- 发布信息 -->
+    <distributionManagement>
+        <repository>
+            <id>local-repo</id> <!-- 本地仓库ID -->
+            <url>file:///D:/environment/maven/apache-maven-3.6.1/mvn_rep</url> <!-- 本地仓库路径 -->
+        </repository>
+    </distributionManagement>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
