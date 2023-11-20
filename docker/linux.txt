@@ -1,0 +1,5 @@
+sudo shutdown -h now
+ip地址  ip addr 
+mkdir -p /my/mysql/data   -p为递归创建文件夹
+
+不要关闭死机的虚拟机 记得备份
