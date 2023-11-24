@@ -1,6 +1,7 @@
 copy configuration可以新运行一个service
 
 nacos单机启动 startup.cmd -m standalone
+sentinel启动 Java -jar sentinel-dashboard-1.8.1.jar 可以配置账号密码
 
 maven使用lifecycle的各种指令
 package打包成jar包
@@ -10,3 +11,15 @@ deploy部署jar包
 
 测试地址：http://localhost:10010/order/101?authorization=admin
 authorization为网关配置的权限地址
+
+
+
+
+高级篇
+微服务调用之前可能会有雪崩问题
+即一个微服务出现问题后，依赖于该微服务的其他微服务的连接一直进来而无法释放 导致其他微服务的资源被占满从而层层崩溃
+总有这几种解决方法
+超时处理 设置超时时间 超时后就断开连接
+船舱模式 设置线程隔离 每个服务分配规定的线程去调用 一个服务崩了其他线程不受影响
+熔断降级 使用熔断器判断失败请求比例 超过比例后熔断该业务 隔绝所有请求
+流量控制 使用Sentinel或者Hystrix进行流量控制 不同于上面三种方法 这个方法是为了预防服务出问题
