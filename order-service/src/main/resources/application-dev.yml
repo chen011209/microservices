@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8082
 spring:
   application:
     name: orderservice # eureka的服务名称
@@ -15,8 +15,12 @@ spring:
         #        namespace: XXXX
         #不同命名空间是隔离的，在nacos中创建命名空间后，使用id来区别
         cluster-name: XM
-#        临时实例,默认为true,差别在nacos主动查询服务状态.且服务宕机后nacos不会剔除
-#        ephemeral: false
+        #        临时实例,默认为true,差别在nacos主动查询服务状态.且服务宕机后nacos不会剔除
+        #        ephemeral: false
+    sentinel:
+      transport:
+        dashboard: localhost:8080 # sentinel控制台地址
+
 
 mybatis:
   type-aliases-package: cn.itcast.user.pojo

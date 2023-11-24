@@ -1,2 +1,10 @@
-2023-11-15 15:50:23,393 WARN isQuickStart:false
+2023-11-24 16:41:19,505 WARN isQuickStart:false
+
+2023-11-24 16:51:20,466 ERROR [db-error] sql : delete from his_config_info where gmt_modified < ? OFFSET 0 ROWS FETCH NEXT ? ROWS ONLY, args : [2023-10-25 16:51:20.0, 1000], error : org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [delete from his_config_info where gmt_modified < ? OFFSET 0 ROWS FETCH NEXT ? ROWS ONLY]; nested exception is java.sql.SQLSyntaxErrorException: Syntax error: Encountered "OFFSET" at line 1, column 52.
+
+2023-11-24 17:01:20,486 ERROR [db-error] sql : delete from his_config_info where gmt_modified < ? OFFSET 0 ROWS FETCH NEXT ? ROWS ONLY, args : [2023-10-25 17:01:20.0, 1000], error : org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [delete from his_config_info where gmt_modified < ? OFFSET 0 ROWS FETCH NEXT ? ROWS ONLY]; nested exception is java.sql.SQLSyntaxErrorException: Syntax error: Encountered "OFFSET" at line 1, column 52.
+
+2023-11-24 17:11:20,528 ERROR [db-error] sql : delete from his_config_info where gmt_modified < ? OFFSET 0 ROWS FETCH NEXT ? ROWS ONLY, args : [2023-10-25 17:11:20.0, 1000], error : org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [delete from his_config_info where gmt_modified < ? OFFSET 0 ROWS FETCH NEXT ? ROWS ONLY]; nested exception is java.sql.SQLSyntaxErrorException: Syntax error: Encountered "OFFSET" at line 1, column 52.
+
+2023-11-24 17:21:20,569 ERROR [db-error] sql : delete from his_config_info where gmt_modified < ? OFFSET 0 ROWS FETCH NEXT ? ROWS ONLY, args : [2023-10-25 17:21:20.0, 1000], error : org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [delete from his_config_info where gmt_modified < ? OFFSET 0 ROWS FETCH NEXT ? ROWS ONLY]; nested exception is java.sql.SQLSyntaxErrorException: Syntax error: Encountered "OFFSET" at line 1, column 52.
 
