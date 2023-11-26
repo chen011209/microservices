@@ -60,7 +60,7 @@ docker-compose logs -f
 运行日志指令也需要到有docker-compose.yaml的文件夹中运行
 查看所有运行服务
 docker-compose config --services  
-根据服务名重启服务 注意服务名和容器名是不一样的
+根据服务名重启服务 注意服务名和容器名是不一样的 服务名即docker-compose文件中的命名
 docker-compose restart userservice orderservice gateway
 
 mysql的ports可能有但不一定做了映射 注意观察格式
