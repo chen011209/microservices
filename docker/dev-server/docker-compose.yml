@@ -10,7 +10,9 @@ services:
   mysql:
     image: mysql:5.7.25
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: 123
+    ports:
+      - "3306:3306"
     volumes:
       - "$PWD/mysql/data:/var/lib/mysql"
       - "$PWD/mysql/conf:/etc/mysql/conf.d/"

@@ -7,6 +7,8 @@ copy configuration可以新运行一个service
 测试从网关进去 到orderservice 到userservice
 能不能访问 并看sentinel有没有记录
 
+访问nacos ip:端口/nacos
+访问sentinel 直接ip:端口
 
 ## dev环境运行 (本地运行环境)
 先启动nacos和sentinel mysql服务
@@ -28,13 +30,19 @@ authorization为网关配置的权限地址
 
 
 ## dev-server (本地运行代码 中间件nacos sentinel和mysql在服务器运行)
+带着docker文件中的dev-server中所有文件(附带mysql文件)进行docker-compose运行
+docker-compose up -d
+停止 docker-compose down
+
 docker拉取sentinel
 docker pull bladex/sentinel-dashboard
 docker run --name sentinel -p 8858:8858 -td bladex/sentinel-dashboard
+不拉取直接运行compose文件也可以 会再拉取
 
+注意：mysql修改root密码在compose文件中修改还是不够的 怎么修改还没去学
 
-带着docker文件中的dev-server中所有文件进行docker-compose运行
-附带mysql文件 compose中指名了使用本地路径
+测试地址
+http://localhost:10010/order/101?authorization=admin
 ## test(全部代码部署到docker中)
 
 

@@ -54,7 +54,8 @@ Dockerfile 是根据jdk打包
 Dockerfile java8根据镜像继承打包
 
 
-到有compose.yaml的文件夹中运行 docker-compose up -d  运行compose
+到有compose.yaml的文件夹中运行
+docker-compose up -d  运行compose
 docker-compose logs -f
 查看日志 可能因为没有连接到nacos而启动失败  需要重启
 运行日志指令也需要到有docker-compose.yaml的文件夹中运行
