@@ -1,4 +1,3 @@
-# 指定执行环境
 spring:
   profiles:
-    active: @package.environment@
+    active: '@env@'

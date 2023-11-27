@@ -17,6 +17,37 @@
 
     <packaging>pom</packaging>
 
+    <!--配置不同的profile，对应不同的生产环境-->
+    <profiles>
+        <profile>
+            <!--开发-->
+            <id>dev</id>
+            <activation>
+                <!--默认开发环境-->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!--      自定义的变量名称env作为标签，标签内是我们配置文件不同环境的后缀          -->
+                <env>dev</env>
+            </properties>
+        </profile>
+        <profile>
+            <!--中间件使用服务器的开发-->
+            <id>dev-server</id>
+            <properties>
+                <env>dev-server</env>
+            </properties>
+        </profile>
+        <profile>
+            <!--测试-->
+            <id>test</id>
+            <properties>
+                <env>test</env>
+            </properties>
+        </profile>
+    </profiles>
+
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -76,4 +107,30 @@
             <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>app</finalName>
+        <plugins>
+            <plugin>
+                <!--   springboot使用maven打包的插件          -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <!--   指定配置文件的位置  -->
+                <directory>src/main/resources</directory>
+                <includes>
+                    <!--   读取resources下的所有文件，include表示指定文件内的，相对的还有excludes ，排除其下的文件 -->
+                    <include>application.yml</include>
+                    <include>application-${env}.yml</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <!-- 开启替换标签，比如我们的'@env'就是通过这个替换的         -->
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
 </project>

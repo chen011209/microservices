@@ -10,7 +10,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   cloud:
     nacos:
-      server-addr: nacos:8848 # nacos服务地址
+      server-addr: nacos:12345 # nacos服务地址
       discovery:
         #        namespace: XXXX
         #不同命名空间是隔离的，在nacos中创建命名空间后，使用id来区别
