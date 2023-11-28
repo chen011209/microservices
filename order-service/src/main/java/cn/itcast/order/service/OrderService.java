@@ -28,6 +28,18 @@ public class OrderService {
         return order;
     }
 
+    public Order testFind(Long orderId) {
+        // 1.查询订单
+        Order order = orderMapper.findById(orderId);
+        // 2.用Feign远程调用
+        User user = userClient.testFind(order.getUserId());
+        // 3.封装user到Order
+        order.setUser(user);
+        // 4.返回
+        return order;
+    }
+
+
     @SentinelResource("goods")
     public void queryGoods(){
         System.err.println("查询商品");
@@ -36,13 +48,11 @@ public class OrderService {
 
 
 
-    //orderId 101 userId 1测试
-
 //    @Autowired
 //    private RestTemplate restTemplate;
     /**
      * restTemplate调用
-     * @param orderId
+     * @param orderId orderId 101 userId 1测试
      * @return
      */
 //    public Order queryOrderById(Long orderId) {

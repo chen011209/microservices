@@ -21,6 +21,6 @@ spring:
           uri: lb://orderservice
           predicates:
             - Path=/order/**
-#      过滤器 可以配置请求头 也可以指定服务配置
+      #      过滤器 可以配置请求头 也可以指定服务配置
       default-filters:
         - AddRequestHeader=Truth,Itcast is freaking awesome!

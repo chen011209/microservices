@@ -15,11 +15,23 @@ public class OrderController {
    @Autowired
    private OrderService orderService;
 
+
+   //测试微服务之间调用------------------------------------------------------------------
     @GetMapping("{orderId}")
     public Order queryOrderByUserId(@PathVariable("orderId") Long orderId) {
         // 根据id查询订单并返回
         return orderService.queryOrderById(orderId);
     }
+
+    @GetMapping("/test/{orderId}")
+    public Order testFind(@PathVariable("orderId") Long orderId) {
+        // 根据id查询订单并返回
+        return orderService.testFind(orderId);
+    }
+    //---------------------------------------------------------------------------------
+
+
+
 
     @GetMapping("/query")
     public String queryOrder() {

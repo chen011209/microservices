@@ -8,8 +8,11 @@ copy configuration可以新运行一个service
 能不能访问 并看sentinel有没有记录
 
 访问nacos ip:端口/nacos
-访问sentinel 直接ip:端口
+访问sentinel 直接ip:端口 localhost:8080
 
+sentinel页面一片空白可能原因
+还未有服务经过
+配置文件中连接sentinel端口错误
 
 建议都使用dev-server方式测试
 后续也只会维护dev-server的配置文件
@@ -26,7 +29,8 @@ startup.cmd -m standalone
 
 sentinel启动 
 执行jar包
-Java -jar sentinel-dashboard-1.8.1.jar 可以配置账号密码
+Java -jar sentinel-dashboard-1.8.1.jar 
+可以配置账号密码
 默认账号密码sentinel 默认端口8080
 
 测试地址：http://localhost:10010/order/101?authorization=admin
@@ -93,6 +97,14 @@ https://juejin.cn/post/7054348294083854343
 之后重新测试 从dev开始测试
 
 # sentinel
+sentinel默认只有controller是需要监控的资源
+可以对其他方法加@SentinelResource("goods")来加入资源监控中 
+同时修改配置文件
+web-context-unify: false # 关闭context整合 默认每个controller为一个触点 关闭后可以将service等也作为一个触点
+
+## 限流
+希望对谁进行限流访问就对什么进行配置资源
+
 三种限流模式
 直接  
 直接对服务访问进行限制 超过后block掉
@@ -102,3 +114,12 @@ https://juejin.cn/post/7054348294083854343
 对低优先级服务进行限流 确保高优先级服务运行
 如查询和更新 都需要数据库锁 优先确保更新
 链路
+a b触点访问同一个触点c 可以对a触点路径访问c进行限制 b触点路径访问c不进行限制
+
+## 流控模式
+qps query per second
+快速失败      达到阈值后就抛异常限制访问 
+warm-up预热   设置阈值 时间 一开始阈值为 阈值/factor 后续到达时间后逐步到达最大阈值 
+              超过阈值的访问同样和快速失败一样限制访问
+排队等待    设置qps和timeout 在排队时间超出timeout的情况下 新进来的请求会限制并抛异常
+            起到流量平整的作用 即使实时qps大于设置的qps 也会逐步放入队列中 直到超出队列长度

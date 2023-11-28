@@ -29,14 +29,16 @@ public class UserController {
      */
     @GetMapping("/{id}")
     public User queryById(@PathVariable("id") Long id, @RequestHeader(value = "Truth", required = false) String truth) {
-
         System.out.println(truth);
-
-
-
         return userService.queryById(id);
+    }
 
-
+    @GetMapping("/test/{id}")
+    User testFind(@PathVariable("id") Long id){
+        User user = new User();
+        user.setId(id);
+        user.setUsername("测试返回用户");
+        return user;
     }
 
 
