@@ -10,6 +10,10 @@ copy configuration可以新运行一个service
 访问nacos ip:端口/nacos
 访问sentinel 直接ip:端口
 
+
+建议都使用dev-server方式测试
+后续也只会维护dev-server的配置文件
+
 ## dev环境运行 (本地运行环境)
 先启动nacos和sentinel mysql服务
 

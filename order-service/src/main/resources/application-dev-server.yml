@@ -20,6 +20,7 @@ spring:
     sentinel:
       transport:
         dashboard: 192.168.184.132:8858 # sentinel控制台地址
+      web-context-unify: false # 关闭context整合 默认每个controller为一个触点 关闭后可以将service等也作为一个触点
 
 
 mybatis:
