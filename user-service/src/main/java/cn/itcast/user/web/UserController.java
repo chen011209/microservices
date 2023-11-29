@@ -28,8 +28,16 @@ public class UserController {
      * @return 用户
      */
     @GetMapping("/{id}")
-    public User queryById(@PathVariable("id") Long id, @RequestHeader(value = "Truth", required = false) String truth) {
+    public User queryById(@PathVariable("id") Long id, @RequestHeader(value = "Truth", required = false) String truth) throws InterruptedException {
         System.out.println(truth);
+
+        if (id == 3) {
+            // 休眠，触发熔断
+            Thread.sleep(60);
+        } else if (id == 4) {
+            throw new RuntimeException("故意出错，触发熔断");
+        }
+
         return userService.queryById(id);
     }
 
